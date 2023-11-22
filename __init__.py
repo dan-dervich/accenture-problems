@@ -1,0 +1,1 @@
+from Herencia import Animal
