@@ -13,6 +13,9 @@ class Animal(ABC):
     @abstractmethod
     def anos_gato(self):
         pass
+    @abstractmethod
+    def emitirSonido(self):
+        pass
 class Perro(Animal):
     def __init__(self, nombre: str, edad: int, raza: str):
         super().__init__(nombre, edad)
@@ -23,6 +26,8 @@ class Perro(Animal):
         pass
     def anos_perro(self):
         return self.edad * 7
+    def emitirSonido(self):
+        return 'guau guau'
     def __str__(self):
         return f'nombre: {self.nombre}, edad: {self.edad}, raza: {self.raza}'
 class Gato(Animal):
@@ -35,6 +40,8 @@ class Gato(Animal):
         pass
     def anos_perro(self):
         pass
+    def emitirSonido(self):
+        return 'miau miau'
     def __str__(self):
         return f'nombre: {self.nombre}, edad: {self.edad}, raza: {self.raza}'
 class Pajaro(Animal):
@@ -47,5 +54,7 @@ class Pajaro(Animal):
         return self.edad * 3
     def anos_perro(self):
         pass
+    def emitirSonido(self):
+        return 'pio pio'
     def __str__(self):
         return f'nombre: {self.nombre}, edad: {self.edad}, raza: {self.raza}'

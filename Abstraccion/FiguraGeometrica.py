@@ -12,8 +12,11 @@ class FiguraGeometrica(ABC):
     @abstractmethod
     def perimetro(self):
         pass
+    def mostrarInfo(self):
+        return f"Alto: {self.alto}\nAncho: {self.ancho}\n"
 class Circulo(FiguraGeometrica):
     def __init__(self, radio:int):
+        super().__init__(radio, radio)
         self.radio = radio
 
     def area(self):
