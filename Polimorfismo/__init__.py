@@ -1,2 +1,2 @@
 from .FiguraGeometrica import *
-from .Herencia import *
+from Herencia import *
